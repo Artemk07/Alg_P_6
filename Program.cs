@@ -1,4 +1,4 @@
-﻿Console.WriteLine("Введите размер массива");
+Console.WriteLine("Введите размер массива");
 int a = Convert.ToInt32(Console.ReadLine());
 int[] Arr = new int[a];
 
@@ -17,17 +17,19 @@ int k = 0;
 int j = 0;
 int[] Arr2 = new int[b];
 Console.WriteLine("");
+Console.WriteLine("Введите элементы массива");
+
 for (int i = 0; i < Arr2.Length; i++){
-    Console.WriteLine("Введите элементы массива");
     if (i % 2 == 0){
         Arr2[Arr2.Length - 1 - k] = Convert.ToInt32(Console.ReadLine());
-        k += 1;
+        k++;
     }
     else if (i % 2 == 1){
         Arr2[j] = Convert.ToInt32(Console.ReadLine());
         j++;
     }
 }
+//
 Console.WriteLine("Массив в правильном порядке:");
 Console.WriteLine(string.Join(" ", Arr2));
 
